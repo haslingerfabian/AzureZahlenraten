@@ -1,7 +1,8 @@
+/* Allgemeine Stile */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(135deg, #1e1e2f, #25254d);
     color: white;
     height: 100vh;
     display: flex;
@@ -9,36 +10,112 @@ body {
     align-items: center;
 }
 
+/* Container */
 .container {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
 }
 
-input, button {
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
+/* Eingabebereich */
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 input {
     width: 80px;
+    padding: 10px;
+    border: 2px solid #00ffd5;
+    border-radius: 5px;
+    background: #121223;
+    color: #00ffd5;
     text-align: center;
+    font-size: 18px;
+    outline: none;
+    transition: 0.3s;
 }
 
+input:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Buttons */
 button {
-    background: #ff758c;
-    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #ff5252;
+    transform: scale(1.1);
 }
 
-#message {
-    margin-top: 10px;
+/* Rate-Button */
+button:nth-child(2) {
+    background: #00ffd5;
+    color: #121223;
+}
+
+button:nth-child(2):hover {
+    background: #00ccaa;
+}
+
+/* Neustart-Button (Neon-Cyan) */
+.restart-btn {
+    background: #00fff7;
+    color: #121223;
+    margin-top: 15px;
     font-weight: bold;
+}
+
+.restart-btn:hover {
+    background: #00d9d2;
+}
+
+/* Nachricht */
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Versuchsanzahl */
+#attempts {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #00ffd5;
+}
+
+/* Zahlenbereich */
+#range {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
