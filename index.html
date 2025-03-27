@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlenraten - Spiel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Zahlenraten 🔢</h1>
+        <p>Errate die geheime Zahl zwischen <strong>1</strong> und <strong>100</strong>!</p>
+        <div class="input-container">
+            <input type="number" id="guessInput" min="1" max="100" placeholder="Dein Tipp">
+            <button onclick="checkGuess()">🔍 Rate!</button>
+        </div>
+        <p id="message">Viel Glück! 🎉</p>
+        <button class="restart-btn" onclick="restartGame()">🔄 Neustart</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
